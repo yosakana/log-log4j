@@ -9,7 +9,7 @@ import org.junit.Test;
 public class log4jTest {
 
     @Test
-    public void test1(){
+    public void test1() {
 
         //开启日志详细信息
         LogLog.setInternalDebugging(true);
@@ -25,7 +25,6 @@ public class log4jTest {
         Logger logger = Logger.getLogger(log4jTest.class);
 
 
-
         logger.fatal("fatal");
         logger.error("error");
         logger.warn("warn");
@@ -33,5 +32,13 @@ public class log4jTest {
         logger.debug("debug");
         logger.info("info");
         logger.trace("trace");
+
+        /*
+            org.apache.log4j.Logger
+         */
+        Logger logger1 = Logger.getLogger(Logger.class);
+
+        logger1.warn("info--");
+
     }
 }
